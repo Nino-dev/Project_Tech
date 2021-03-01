@@ -22,6 +22,4 @@ app.post('/success', (req, res) => {
   res.render('success', { data });
 });
 
-
-
 app.listen(3000);
