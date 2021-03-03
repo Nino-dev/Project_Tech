@@ -1,4 +1,5 @@
 const express = require('express');
+const connectDB = require('./database')
 const path = require('path');
 const slug = require('slug');
 const bodyParser = require('body-parser');
@@ -8,6 +9,7 @@ const indexRouter = require('./routes/index');
 const successRouter = require('./routes/success');
 
 const app = express();
+connectDB();
 
 app.set('views', path.join(__dirname, 'views/pages/'));
 app.set('view engine', 'ejs');
