@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-const db = require('../connection')
+const mongoose = require('mongoose');
+const db = require('../connection');
 
 const PreferenceSchema = new mongoose.Schema({
     username: {
@@ -12,6 +12,6 @@ const PreferenceSchema = new mongoose.Schema({
     }
 });
 
-const preferences = mongoose.model('preferences', PreferenceSchema)
+const preferences = mongoose.model('preferences', PreferenceSchema);
 
-module.exports = preferences
+module.exports = preferences;

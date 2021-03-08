@@ -2,8 +2,9 @@ const express = require('express');
 const path = require('path');
 const slug = require('slug');
 const bodyParser = require('body-parser');
-const jsonParser = bodyParser.json()
+const jsonParser = bodyParser.json();
 
+// Routes
 const indexRouter = require('./routes/index');
 const successRouter = require('./routes/success');
 
@@ -14,7 +15,7 @@ const preferences = require('./models/preferences');
 require('dotenv').config();
 const mongoose = require('mongoose');
 const connectDB = require('./connection');
-connectDB()
+connectDB();
 
 const app = express();
 
@@ -36,13 +37,13 @@ app.post('/add', async (req, res) => {
       brands: brands
     });
     await preference.save()
-    .then(() => {res.redirect('success')
-  })
+    .then(() => {res.redirect('success');
+  });
     } catch(err) {
         console.log(err);
         res.status(500).send();
     }
-  })
+  });
 
 // Update Array
 app.post('/update', async (req, res) => {
@@ -55,13 +56,13 @@ app.post('/update', async (req, res) => {
           brands: brands
         });
     await preference.save()
-    .then(() => {res.redirect('success')
-  })
+    .then(() => {res.redirect('success');
+  });
     } catch(err) {
         console.log(err);
         res.status(500).send();
     }
-  })
+  });
 
 //Delete preferences
 app.post('/delete', async (req, res) => {
@@ -76,7 +77,7 @@ app.post('/delete', async (req, res) => {
     }
   });
 
-//Read data from DB
+//Find data from DB and render to template
 app.get('/success', async (req, res) => {
   const dataPreferences = await preferences.findOne();
   res.render('success', {data: dataPreferences});

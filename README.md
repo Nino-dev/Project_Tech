@@ -1,6 +1,8 @@
 # Project Tech: Matching-app
 
 This is the installation for a matching app created in ExpressJS for Project Tech.
+The app contains a feature to assign preferences (data) to an username. Also
+you can update or delete this data.
 
 ## NodeJS
 
@@ -23,6 +25,15 @@ Because you've installed node before you have access to NPM. With NPM you can in
 npm install
 ```
 **Make sure you write this line of code inside the root folder of your project!**
+
+## Setup environment variables
+First you have to create a .env file.
+After that you have to fill this file with the following variable:
+```
+ATLAS_URI=
+```
+
+**Don't forget to include the .env file in your .gitignore**
 
 ## Start server
 
