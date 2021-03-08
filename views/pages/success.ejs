@@ -2,6 +2,7 @@
 <%- include ../partials/header %>
 <section class="layout">
 <h1>Your preferences</h1>
+<h2>Welcome, <span><%= data.username %></span></h2>
 <ul class="brands">
   <% for (let i = 0; i < data.brands.length; i++) { %>
     <li class="brand"><%= data.brands[i] %></li>

@@ -68,6 +68,9 @@ body h2 {
   font-weight: 500;
   margin-bottom: 0.5em;
 }
+body h2 span {
+  color: #f6c300;
+}
 
 ul > li > a > img {
   width: 10em;
