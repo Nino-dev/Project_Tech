@@ -1,4 +1,13 @@
 <%- include ../partials/head %>
-  <h1>Data was sent</h1>
-  <%- JSON.stringify(data) %>
+<%- include ../partials/header %>
+<section class="layout">
+<h1>Your preferences</h1>
+<ul class="brands">
+  <% for (let i = 0; i < data.brands.length; i++) { %>
+    <li class="brand"><%= data.brands[i] %></li>
+  <%  } %>
+</ul>
+  <%- include ../components/update %>
+  <%- include ../components/delete %>
+</section>
 <%- include ../partials/footer %>

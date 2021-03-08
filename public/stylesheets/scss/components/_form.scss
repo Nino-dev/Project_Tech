@@ -1,1 +1,35 @@
-
+form {
+  width: 100%;
+  input[type="text"] {
+    width: 100%;
+    font-size: 1.5em;
+    border: .2em solid #f6c300;
+    border-radius: .2em;
+    margin-bottom: .5em;
+  }
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    legend {
+      font-size: 1.25em;
+      font-weight: 500;
+      margin-bottom: .5em;
+    }
+  }
+  label {
+    font-size: 1.25em;
+  }
+  input[type="submit"] {
+    border: none;
+    background: #f6c300;
+    padding: 1em;
+    font-weight: 900;
+    border-radius: .2em;
+    margin: 1em 0;
+    font-size: 1.25em;
+    cursor: pointer;
+    &:hover {
+      background: #c19405;
+    }
+  }
+}

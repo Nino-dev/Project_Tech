@@ -12,7 +12,7 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "mongodb": "^3.6.3",
-    "mongoose": "^5.11.15",
+    "mongoose": "^5.11.18",
     "slug": "^4.0.2"
   },
   "devDependencies": {
