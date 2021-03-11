@@ -58,8 +58,8 @@ app.post('/update', async (req, res) => {
         }).exec();
     // await preference.save()
     res.redirect('success');
-  });
-    } catch(err) {
+  }
+     catch(err) {
         console.log(err);
         res.status(500).send();
     }
