@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 const slug = require('slug');
 const bodyParser = require('body-parser');
-const jsonParser = bodyParser.json();
+const jsonParser = bodyParser.json
+const PORT = process.env.PORT || 3000;
 
 // Routes
 const indexRouter = require('./routes/index');
@@ -63,7 +64,7 @@ app.post('/update', async (req, res) => {
         res.status(500).send();
     }
   });
-  // await onnodig 
+  // await onnodig
 
 //Delete preferences
 app.post('/delete', async (req, res) => {
@@ -84,4 +85,4 @@ app.get('/success', async (req, res) => {
   res.render('success', {data: dataPreferences});
 });
 
-app.listen(3000);
+app.listen(PORT);
