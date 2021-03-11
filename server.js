@@ -57,7 +57,7 @@ app.post('/update', async (req, res) => {
           brands: brands
         }).exec();
     // await preference.save()
-    res.redirect('success');
+      res.redirect('success');
   }
      catch(err) {
         console.log(err);
