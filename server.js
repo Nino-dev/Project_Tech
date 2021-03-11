@@ -53,11 +53,11 @@ app.post('/update', async (req, res) => {
     let preference = preferences.findOne({
           username: "nino"
         });
-        preferences.updateOne({}, {
+        await preferences.updateOne({}, {
           brands: brands
         }).exec();
     // await preference.save()
-    .then(() => {res.redirect('success');
+    res.redirect('success');
   });
     } catch(err) {
         console.log(err);
