@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "start": "nodemon server.js",
-    "build": "sass --watch public/stylesheets/scss/main.scss public/stylesheets/css/main.css"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
