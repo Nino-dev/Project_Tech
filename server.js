@@ -50,10 +50,10 @@ app.post('/add', async (req, res) => {
 app.post('/update', async (req, res) => {
   try {
     const brands = req.body.brands
-    let preference = await preferences.findOne({
+    let preference = preferences.findOne({
           username: "nino"
         });
-        await preferences.updateOne({}, {
+        preferences.updateOne({}, {
           brands: brands
         });
     await preference.save()
