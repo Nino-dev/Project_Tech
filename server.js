@@ -63,6 +63,7 @@ app.post('/update', async (req, res) => {
         res.status(500).send();
     }
   });
+  // await onnodig 
 
 //Delete preferences
 app.post('/delete', async (req, res) => {
