@@ -55,8 +55,8 @@ app.post('/update', async (req, res) => {
         });
         preferences.updateOne({}, {
           brands: brands
-        });
-    await preference.save()
+        }).exec();
+    // await preference.save()
     .then(() => {res.redirect('success');
   });
     } catch(err) {
