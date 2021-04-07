@@ -3,6 +3,7 @@ const path = require('path');
 const slug = require('slug');
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json
+
 const PORT = process.env.PORT || 3000;
 
 // Routes
@@ -50,15 +51,16 @@ app.post('/add', async (req, res) => {
 app.post('/update', async (req, res) => {
   try {
     const brands = req.body.brands
+    const dataPreferences = await preferences.findOne();
     let preference = preferences.findOne({
           username: "nino"
         });
         await preferences.updateOne({}, {
           brands: brands
         }).exec();
-    // await preference.save()
-      res.redirect('success');
-  }
+    // await preference.save() 
+      res.render('success',{data: dataPreferences});
+    }
      catch(err) {
         console.log(err);
         res.status(500).send();
